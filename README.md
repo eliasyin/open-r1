@@ -64,6 +64,11 @@ This will also install PyTorch `v2.5.1` and it is **very important** to use this
 
 ```shell
 GIT_LFS_SKIP_SMUDGE=1 uv pip install -e ".[dev]" --link-mode=copy
+# 注意，如果cuda版本是12.3，那么应该执行下述指令：
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+Looking in indexes: https://download.pytorch.org/whl/cu121
+python -m pip install --upgrade pip wheel setuptools
+pip install --no-build-isolation -e .
 ```
 
 Next, log into your Hugging Face and Weights and Biases accounts as follows:
