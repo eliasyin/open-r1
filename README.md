@@ -74,6 +74,7 @@ Looking in indexes: https://download.pytorch.org/whl/cu121
 python -m pip install --upgrade pip wheel setuptools
 pip install --no-build-isolation -e .
 pip install flash-attn --no-build-isolation
+pip install wandb
 ```
 
 Next, log into your Hugging Face and Weights and Biases accounts as follows:
