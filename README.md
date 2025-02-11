@@ -49,6 +49,10 @@ We will use the DeepSeek-R1 [tech report](https://github.com/deepseek-ai/DeepSee
 To run the code in this project, first, create a Python virtual environment using e.g. `uv`.
 To install `uv`, follow the [UV Installation Guide](https://docs.astral.sh/uv/getting-started/installation/).
 
+```install uv
+wget -qO- https://astral.sh/uv/install.sh | sh
+```
+
 
 ```shell
 uv venv openr1 --python 3.11 && source openr1/bin/activate && uv pip install --upgrade pip --link-mode=copy
@@ -63,8 +67,8 @@ uv pip install vllm==0.7.1 --link-mode=copy
 This will also install PyTorch `v2.5.1` and it is **very important** to use this version since the vLLM binaries are compiled for it. You can then install the remaining dependencies for your specific use case via `pip install -e .[LIST OF MODES]`. For most contributors, we recommend:
 
 ```shell
-GIT_LFS_SKIP_SMUDGE=1 uv pip install -e ".[dev]" --link-mode=copy
-# 注意，如果cuda版本是12.3，那么应该执行下述指令：
+# GIT_LFS_SKIP_SMUDGE=1 uv pip install -e ".[dev]" --link-mode=copy
+# cuda版本是12.3的替代指令：
 pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
 Looking in indexes: https://download.pytorch.org/whl/cu121
 python -m pip install --upgrade pip wheel setuptools
