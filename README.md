@@ -73,6 +73,7 @@ pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https
 Looking in indexes: https://download.pytorch.org/whl/cu121
 python -m pip install --upgrade pip wheel setuptools
 pip install --no-build-isolation -e .
+pip install flash-attn --no-build-isolation
 ```
 
 Next, log into your Hugging Face and Weights and Biases accounts as follows:
